@@ -3,8 +3,8 @@
 // You may assume that each input would have exactly one solution, and may not use the same element twice //
 
 // Example:
-    // Input: nums = [ 7, 2, 13, 11 ]  Target = 9  //
-    // Output: [ 0, 1 ] //
+    // Input: nums = [7, 2, 13, 11]  Target = 9  //
+    // Output: [0, 1] //
 
 // Solution:  //
 
