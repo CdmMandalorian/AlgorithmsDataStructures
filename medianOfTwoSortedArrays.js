@@ -19,6 +19,8 @@
 //  - 1 <= m + n <=2000
 //  - 10⁶ <= nums1[i], nums2[i] <= 10⁶
 
+// Solution:  //
+
     var findMedianSortedArrays = function(nums1, nums2) {
         var m = nums1.length;
         var n = nums2.length;
