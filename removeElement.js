@@ -32,11 +32,45 @@
 //  Example:
 
 //  Input:  nums = [3, 2, 2, 3] val = 3
-//  Output: , nums = [2, 2, _, _]
+//  Output: 2, nums = [2, 2, _, _]
 //  Explanation:    Your function should return k = 2, with the first two elements of nums being 2
 //                  It does not matter what you leave beyond the returned k (hence they are underscores)
 
-//  Input:  nums = []
-//  Output: , nums = []
-//  Explanation:    
+//  Input:  nums = [0, 1, 2, 2, 3, 0, 4, 2], val = 2
+//  Output: 5, nums = [0, 1, 4, 0, 3, _, _, _]
+//  Explanation:    Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4
 //                  It does not matter what you leave beyond the returned k (hence they are underscores)
+
+//  Constraints:
+//  - 0 <= nums.length <= 100
+//  - 0 <= nums[i] <= 50
+//  - 0 <= val <= 100
+
+//  Solution:   //
+
+    var removeElement = function(nums, val) {
+        if (!nums.length) {
+            // when there is no nums in the array return 0
+            return 0;
+        }
+        
+        if (val === undefined) {
+            throw new Error('argument val cannot be undefined for removeElement function');
+        }
+        
+        let index = 0;
+        
+        /* for each items in the given array, check if the val is not equivalent to the val to the removed
+         * if yes, then copy that value to the index which we are having as a pointer
+         * and then increment the index by 1
+         * finally return the index which should hold the number is items in the given array which is not === val
+        */
+        for (let i = 0; i < nums.length; i++) {
+            if (nums[i] !== val) {
+                nums[index] = nums[i];
+                index++;
+            }
+        }
+        
+        return index;
+    };
